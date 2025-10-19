@@ -1,0 +1,62 @@
+.
+├── build
+│   ├── classes
+│   │   └── java
+│   │       ├── main
+│   │       │   └── de
+│   │       │       └── webtech
+│   │       │           └── project
+│   │       │               └── movie
+│   │       └── test
+│   │           └── de
+│   │               └── webtech
+│   │                   └── project
+│   │                       └── movie
+│   ├── generated
+│   │   └── sources
+│   │       ├── annotationProcessor
+│   │       │   └── java
+│   │       │       ├── main
+│   │       │       └── test
+│   │       └── headers
+│   │           └── java
+│   │               ├── main
+│   │               └── test
+│   ├── reports
+│   │   └── tests
+│   │       └── test
+│   │           ├── classes
+│   │           ├── css
+│   │           ├── js
+│   │           └── packages
+│   ├── resources
+│   │   └── main
+│   │       ├── static
+│   │       └── templates
+│   ├── test-results
+│   │   └── test
+│   │       └── binary
+│   └── tmp
+│       ├── compileJava
+│       ├── compileTestJava
+│       └── test
+├── gradle
+│   └── wrapper
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── de
+    │   │       └── webtech
+    │   │           └── project
+    │   │               └── movie
+    │   └── resources
+    │       ├── static
+    │       └── templates
+    └── test
+        └── java
+            └── de
+                └── webtech
+                    └── project
+                        └── movie
+
+60 directories

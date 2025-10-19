@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.webtech.project.movie.MovieApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-19T15:03:00.485Z" hostname="Mac.fritz.box" time="0.285">
+  <properties/>
+  <testcase name="contextLoads()" classname="de.webtech.project.movie.MovieApplicationTests" time="0.285"/>
+  <system-out><![CDATA[17:02:59.972 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [de.webtech.project.movie.MovieApplicationTests]: MovieApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:03:00.011 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration de.webtech.project.movie.MovieApplication for test class de.webtech.project.movie.MovieApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-19T17:03:00.156+02:00  INFO 4435 --- [movie] [    Test worker] d.w.project.movie.MovieApplicationTests  : Starting MovieApplicationTests using Java 17.0.16 with PID 4435 (started by kbk in /Users/kbk/Desktop/Uni/Prog 3/Movie_Webtech)
+2025-10-19T17:03:00.157+02:00  INFO 4435 --- [movie] [    Test worker] d.w.project.movie.MovieApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2025-10-19T17:03:00.480+02:00  INFO 4435 --- [movie] [    Test worker] d.w.project.movie.MovieApplicationTests  : Started MovieApplicationTests in 0.424 seconds (process running for 0.778)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
