@@ -1,5 +1,6 @@
 package de.webtech.project.movie;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "https://frontend-movieapp.onrender.com")
 public class MovieController {
 
     @GetMapping("/movies")
