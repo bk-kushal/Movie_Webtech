@@ -1,23 +1,51 @@
 package de.webtech.project.movie;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "https://frontend-movieapp.onrender.com")
+@RequestMapping("/movies")
 public class MovieController {
 
+    private final MovieService movieService;
+
+    @Autowired
+    public MovieController(MovieService movieService) {
+        this.movieService = movieService;
+    }
     @GetMapping("/movies")
-    public List<Movie> getAllMovies() {
-        List<Movie> movies = new ArrayList<>();
-        movies.add(new Movie("Whiplash",2014));
-        movies.add(new Movie("Nocturnal Animals",2016));
-        movies.add(new Movie("Dune",2021));
-        return movies;
+    public ResponseEntity<List<Movie>> getAllMovies() {
+        List<Movie> movies = movieService.getAllMovies();
+        return ResponseEntity.ok(movies);
+
+    }
+
+    @PostMapping("/movies")
+    public ResponseEntity<Movie> createMovie(@RequestBody Movie movie) {
+        Movie savedMovie = movieService.createMovie(movie);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedMovie);
+    }
+
+    @GetMapping("/movies/{id}")
+    public ResponseEntity<Movie> getMovieById(@PathVariable Long id) {
+        Movie movie = movieService.getMovieById(id);
+        if(movie != null) {
+            return ResponseEntity.ok(movie);
+        }
+        return ResponseEntity.notFound().build();
+
+    }
+
+    @DeleteMapping("/movies/{id}")
+    public ResponseEntity<Void> deleteMovie(@PathVariable Long id) {
+        movieService.deleteMovie(id);
+        return ResponseEntity.noContent().build();
     }
 
 }

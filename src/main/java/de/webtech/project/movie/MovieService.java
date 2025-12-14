@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MovieSevice {
+public class MovieService {
 
     private final MovieRepository movieRepository;
 
     @Autowired
-    public MovieSevice(MovieRepository movieRepository) {
+    public MovieService(MovieRepository movieRepository) {
         this.movieRepository = movieRepository;
     }
 
@@ -23,7 +23,12 @@ public class MovieSevice {
         return movieRepository.save(movie);
     }
 
-    public Movie getmovieById(long id) {
-        return movieRepository.getOne(id);
+    public Movie getMovieById(long id) {
+        return movieRepository.findById(id).orElse(null);
     }
+
+    public void deleteMovie(Long id){
+    movieRepository.deleteById(id);
+    }
+}
 

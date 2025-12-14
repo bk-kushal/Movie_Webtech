@@ -1,8 +1,21 @@
 package de.webtech.project.movie;
 
-public class Movie {private String title;
+import jakarta.persistence.*;
+@Entity
+@Table (name = "movies")
+public class Movie {
+
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column (nullable = false)
+    private String title;
+
+    @Column(name = "release_year")
     private int releaseYear;
 
+    public Movie() {}
 
     //Konstruktor
     public Movie(String title, int releaseYear){
@@ -10,6 +23,16 @@ public class Movie {private String title;
         this.releaseYear = releaseYear;
     }
     // getter und Setter
+
+    public Long getId() {
+        return id;
+
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -27,3 +50,7 @@ public class Movie {private String title;
     }
 
 }
+
+
+
+
