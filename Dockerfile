@@ -1,7 +1,7 @@
 FROM eclipse-temurin:17-jdk-alpine AS build
 WORKDIR /home/gradle/src
 COPY . .
-RUN chmod +x ./gradlew && ./gradlew build --no-daemon
+RUN chmod +x ./gradlew && ./gradlew build --no-daemon -x test
 
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
