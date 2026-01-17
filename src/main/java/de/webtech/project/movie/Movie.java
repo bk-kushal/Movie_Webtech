@@ -16,7 +16,7 @@ public class Movie {
     private int releaseYear;
 
     @Column (nullable = true)
-    private int rating; //1-5
+    private Integer rating;
 
     @Column(columnDefinition = "TEXT")
     private String review;
@@ -24,7 +24,7 @@ public class Movie {
     public Movie() {}
 
     //Konstruktor
-    public Movie(String title, int releaseYear, int rating, String review) {
+    public Movie(String title, int releaseYear, Integer rating, String review) {
         this.title = title;
         this.releaseYear = releaseYear;
         this.rating = rating;
@@ -32,10 +32,7 @@ public class Movie {
     }
     // getter und Setter
 
-    public Long getId() {
-        return id;
-
-    }
+    public Long getId() {return id;}
     public void setId(Long id) {
         this.id = id;
     }
@@ -53,8 +50,8 @@ public class Movie {
     public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
     }
-    public int getRating() { return rating;}
-    public void setRating(int rating) { this.rating = rating; }
+    public Integer getRating() { return rating;}
+    public void setRating(Integer rating) { this.rating = rating; }
 
     public String getReview() { return review; }
     public void setReview(String review) { this.review = review; }
