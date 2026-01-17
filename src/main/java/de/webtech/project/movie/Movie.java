@@ -24,7 +24,7 @@ public class Movie {
     public Movie() {}
 
     //Konstruktor
-    public Movie(String title, int releaseYear){
+    public Movie(String title, int releaseYear, int rating, String review) {
         this.title = title;
         this.releaseYear = releaseYear;
         this.rating = rating;
