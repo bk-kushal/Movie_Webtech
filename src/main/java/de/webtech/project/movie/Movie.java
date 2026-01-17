@@ -15,7 +15,7 @@ public class Movie {
     @Column(name = "release_year")
     private int releaseYear;
 
-    @Column (nullable = false)
+    @Column (nullable = true)
     private int rating; //1-5
 
     @Column(columnDefinition = "TEXT")
