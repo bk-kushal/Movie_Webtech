@@ -42,6 +42,23 @@ public class MovieController {
 
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Movie> updateMovie(@PathVariable Long id, @RequestBody Movie updatedMovie) {
+        Movie existingMovie = movieService.getMovieById(id);
+        if (existingMovie == null) {
+            return ResponseEntity.notFound().build();
+        }
+        existingMovie.setTitle(updatedMovie.getTitle());
+        existingMovie.setReleaseYear(updatedMovie.getReleaseYear());
+        existingMovie.setRating(updatedMovie.getRating());
+        existingMovie.setReview(updatedMovie.getReview());
+
+        Movie savedMovie = movieService.createMovie(existingMovie);
+        return ResponseEntity.ok(savedMovie);
+
+    }
+
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMovie(@PathVariable Long id) {
         movieService.deleteMovie(id);
