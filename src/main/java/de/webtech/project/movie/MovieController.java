@@ -20,10 +20,9 @@ public class MovieController {
         this.movieService = movieService;
     }
     @GetMapping
-    public ResponseEntity<List<Movie>> getAllMovies() {
-        List<Movie> movies = movieService.getAllMovies();
+    public ResponseEntity<List<Movie>> getMovies(@RequestParam String username) {
+        List<Movie> movies = movieService.getMoviesByUsername(username);
         return ResponseEntity.ok(movies);
-
     }
 
     @PostMapping

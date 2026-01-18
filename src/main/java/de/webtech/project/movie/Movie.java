@@ -20,6 +20,8 @@ public class Movie {
 
     @Column(columnDefinition = "TEXT")
     private String review;
+    private String username;
+
 
     public Movie() {}
 
@@ -55,6 +57,10 @@ public class Movie {
 
     public String getReview() { return review; }
     public void setReview(String review) { this.review = review; }
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
 
 }
 
