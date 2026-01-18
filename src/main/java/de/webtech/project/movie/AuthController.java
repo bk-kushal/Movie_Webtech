@@ -1,6 +1,5 @@
 package de.webtech.project.movie;
 
-import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
